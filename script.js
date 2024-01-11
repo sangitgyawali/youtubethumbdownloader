@@ -2,18 +2,12 @@ document.getElementById('thumbnailForm').addEventListener('submit', function (e)
     e.preventDefault();
     const youtubeUrl = document.getElementById('youtubeUrl').value;
 
-    if (isValidYoutubeUrl(youtubeUrl)) {
-        const videoId = getYoutubeVideoId(youtubeUrl);
-
         if (videoId) {
             const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
             document.getElementById('thumbnailContainer').innerHTML = `<img src="${thumbnailUrl}" alt="Thumbnail">`;
             downloadthumbail(thumbnailUrl);
         } else {
             alert('Invalid YouTube URL. Please enter a valid URL.');
-        }
-    } else {
-        alert('Invalid YouTube URL format. Please enter a valid YouTube URL.');
     }
 });
 
