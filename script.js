@@ -5,8 +5,8 @@ document.getElementById('thumbnailForm').addEventListener('submit', function (e)
 
     if (videoId) {
         const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-        document.getElementById('thumbnailContainer').innerHTML = `<img src="${thumbnailUrl}" alt="Thumbnail" width="600"
-        height="420">`;
+        document.getElementById('thumbnailContainer').innerHTML = `<img src="${thumbnailUrl}" alt="Thumbnail" width="600" height="420">`;
+
         document.getElementById('downloadButton').style.display = 'block';
 
         // Attach click event listener to the download button
@@ -18,8 +18,6 @@ document.getElementById('thumbnailForm').addEventListener('submit', function (e)
         alert('Invalid YouTube URL. Please enter a valid URL.');
     }
 });
-
-
 
 function getYoutubeVideoId(url) {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|\?v=)([^#\&\?]*).*/;
