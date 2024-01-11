@@ -5,8 +5,9 @@ document.getElementById('thumbnailForm').addEventListener('submit', function (e)
 
     if (videoId) {
         const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-        document.getElementById('thumbnailContainer').innerHTML = `<img src="${thumbnailUrl}" alt="Thumbnail" width="640"
+        document.getElementById('thumbnailContainer').innerHTML = `<img src="${thumbnailUrl}" alt="Thumbnail" width="600"
         height="426">`;
+        downloadThumbnail();
     } else {
         alert('Invalid YouTube URL. Please enter a valid URL.');
     }
